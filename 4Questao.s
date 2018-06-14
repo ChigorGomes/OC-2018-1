@@ -1,0 +1,9 @@
+		MOV		R0,#100
+		MOV		R1,#100
+		cmp		R0,R1
+		BLS		ELSE
+		MOV		LR,R0
+		B		FIM
+ELSE
+		MOV		LR,R1
+FIM
