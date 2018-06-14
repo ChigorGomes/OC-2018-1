@@ -23,4 +23,4 @@ LOOP
 				B		LOOP
 				
 DONE
-				mOv		LR,R2
+				MOV		LR,R2
