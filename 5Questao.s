@@ -12,10 +12,10 @@ AREA_Instrucoes
 				MOV		R4,#0 ; i=0
 				MOV		R5,#0 ; k=0 que sera o iterador do vetSalarios
 LOOP
-				LDR		R6,[R1,R5] ;acessa o conteudo do vetor, pc+4 
+				LDR		R6,[R1,R5] ;acessa o conteudo do vetor, pc+4
 				CMP		R3,R4 ; verifica se 7 e maior que i
 				BLE		FIM ; desvia se condicao for satisfeita
-				ADD		R2,R2,R6 ; total+=vetSalarios[i] 
+				ADD		R2,R2,R6 ; total+=vetSalarios[i]
 				ADD		R4,R4,#1 ; pc+4
 				ADD		R5,R5,#4 ; itera de 4 em 4 bytes
 				B		LOOP

@@ -1,5 +1,5 @@
 AREA_Variaveis
-dividendo			DCD		5 ; valor que sera verifica se eh par ou impar
+dividendo			DCD		6 ; valor que sera verifica se eh par ou impar
 divisor			DCD		2 ; constante nao modifica, pois queremos dividir o numero por 2
 quociente			DCD		0
 				ADR		R1,dividendo
@@ -50,8 +50,12 @@ LOOP3
 				ADD		R7,R7,R8 ; soma+=R8
 				ADD		R6,R6,#1 ; k++
 				B		LOOP3 ; volta para a condicao acima
-DONE2			ADD		R0,R7,#2 ; adiciona em R0=(numero*numero)+2
-DONE3			ADD		R0,R7,#0 ; adiciona em R0=soma no caso (numero+1)*2
+DONE2			ADD		R0,R7,#2 ; PAR -> adiciona em R0=(numero*numero)+2
+				B		PAR
+DONE3			ADD		R0,R7,#0 ; IMPAR -> adiciona em R0=soma no caso (numero+1)*2
+				B		IMPAR
+PAR				MOV		LR,R0
+IMPAR			MOV		LR,R0
 				
 				
 				
