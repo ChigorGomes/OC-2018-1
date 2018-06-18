@@ -38,7 +38,7 @@ LOOP2
 				ADD		R6,R6,#1 ; k++
 				B		LOOP2 ; volta para a condicao acima
 				
-DONE2			ADD		R0,R7,#2 ; adiciona em R0=(numero*numero)+2
+				
 				
 diferente			ADD		R8,R5,#1 ; caso for diferente R8=aux+1
 				MOV		R6,#0 ; k=0
@@ -50,7 +50,9 @@ LOOP3
 				ADD		R7,R7,R8 ; soma+=R8
 				ADD		R6,R6,#1 ; k++
 				B		LOOP3 ; volta para a condicao acima
+DONE2			ADD		R0,R7,#2 ; adiciona em R0=(numero*numero)+2
 DONE3			ADD		R0,R7,#0 ; adiciona em R0=soma no caso (numero+1)*2
+				
 				
 				
 				
